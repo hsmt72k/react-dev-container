@@ -1,0 +1,27 @@
+{
+	"name": "React Dev Docker Container",
+	"dockerComposeFile": ["./docker-compose.yml"],
+	"service": "react-dev",
+	"workspaceFolder": "/app",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"vscode-icons-team.vscode-icons"
+	],
+	// コンテナ内に追加するVS Codeの設定
+	"settings": {
+		"eslint.workingDirectories": [
+			{ "mode": "auto" }
+		],
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		  },
+		  "eslint.format.enable": false,
+		  "editor.formatOnSave": true,
+		  "editor.lineNumbers": "on",
+		  "files.insertFinalNewline": true,
+		  "files.trimTrailingWhitespace": true,
+		  "workbench.iconTheme": "vscode-icons"
+	}
+}
